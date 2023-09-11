@@ -8,10 +8,15 @@ const useChartData = () => {
     useEffect(() => {
         const editChartData = async () => {
             const data: ChartDataResponse = await getChartData();
-            const arrData: ChartData[] = Object.entries(data).map(([time, item]) => ({
-                time: new Date(time).toLocaleDateString(),
-                ...item,
-            }));
+            const arrData: ChartData[] = Object.entries(data).map(([time, item]) => {
+                const timeParts = time.split(' ');
+                const timeOnly = timeParts[1];
+
+                return {
+                    time: timeOnly,
+                    ...item,
+                };
+            });
 
             setChartData(arrData);
         };
