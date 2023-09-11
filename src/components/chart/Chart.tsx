@@ -13,7 +13,7 @@ import {
     XAxis,
     YAxis,
 } from 'recharts';
-import { CustomisedDot } from '..';
+import { CustomToolTip, CustomisedDot } from '..';
 
 interface IProps {
     district: string;
@@ -30,10 +30,10 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
             <ComposedChart
                 data={chartData}
                 margin={{
-                    top: 20,
-                    right: 20,
-                    bottom: 20,
-                    left: 20,
+                    top: 40,
+                    right: 40,
+                    bottom: 40,
+                    left: 40,
                 }}
                 barGap={10}
             >
@@ -58,7 +58,16 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
                         offset: -10,
                     }}
                 />
-                <Tooltip />
+                <Tooltip
+                    content={
+                        <CustomToolTip
+                            active={false}
+                            setDot={setDot}
+                            payload={[]}
+                            category={category}
+                        />
+                    }
+                />
                 <Legend height={50} />
                 {category === '전체' || category === 'area' ? (
                     <Bar
