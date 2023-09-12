@@ -42,7 +42,7 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
                 <YAxis
                     yAxisId="left"
                     label={{
-                        value: 'value_area',
+                        value: 'Area',
                         angle: -90,
                         position: 'insideLeft',
                         offset: 1,
@@ -52,7 +52,7 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
                     yAxisId="right"
                     orientation="right"
                     label={{
-                        value: 'value_bar',
+                        value: 'Bar',
                         angle: 90,
                         position: 'insideRight',
                         offset: -10,
@@ -69,7 +69,7 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
                     }
                 />
                 <Legend height={50} />
-                {category === '전체' || category === 'area' ? (
+                {category === '전체' || category === 'bar' ? (
                     <Bar
                         dataKey="value_bar"
                         barSize={20}
