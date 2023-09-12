@@ -2,16 +2,100 @@
 
 ## 프로젝트 소개
 
+<p align="center">
+    <img src="/public/result/timeserieschart.png" style="width: 650px">
+</p>
+
 -   목표 : 주어진 데이터를 기반으로 시계열 차트 만들기
 -   작업 기간 : 2023.09.10 - 2023.09.13
-
-## 배포 URL
-
-[배포 URL 바로가기](#)
+-   배포 URL : [배포 URL 바로가기](https://time-series-chart-hof1ohol7-ukssss.vercel.app/)
 
 ## 기술 스택
 
-![vite](https://img.shields.io/badge/vite-4.4.5-646CFF?logo=vite) ![typescript](https://img.shields.io/badge/typescript-5.0.2-3178C6?logo=typescript) ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react) ![reactrouter](https://img.shields.io/badge/react--router--dom-6.15.0-CA4245?logo=reactrouter) ![axios](https://img.shields.io/badge/axios-6.15.0-5A29E4?logo=axios) ![styled-components](https://img.shields.io/badge/styled--components-6.0.7-DB7093?logo=styledcomponents) ![vercel](https://img.shields.io/badge/vercel-000000?logo=vercel)
+![vite](https://img.shields.io/badge/vite-4.4.5-646CFF?logo=vite) ![typescript](https://img.shields.io/badge/typescript-5.0.2-3178C6?logo=typescript) ![react](https://img.shields.io/badge/react-18.2.0-61DAFB?logo=react) ![reactrouter](https://img.shields.io/badge/react--router--dom-6.15.0-CA4245?logo=reactrouter) ![recharts](https://img.shields.io/badge/recharts-2.8.0-22B5BF?logo=recharts) ![axios](https://img.shields.io/badge/axios-6.15.0-5A29E4?logo=axios) ![styled-components](https://img.shields.io/badge/styled--components-6.0.7-DB7093?logo=styledcomponents) ![vercel](https://img.shields.io/badge/vercel-000000?logo=vercel)
+
+## 설치 및 실행
+
+1. 저장소 복제 (Clone Repository)
+
+```zsh
+$ git clone https://github.com/ukssss/time-series-chart.git
+```
+
+2. 종속성 설치 (Install Dependencies)
+
+```zsh
+$ npm install
+```
+
+3. 애플리케이션 실행 (Run Application)
+
+```zsh
+$ npm run dev
+```
+
+## 폴더 구조
+
+```base
+src
+ ┣ api
+ ┃ ┣ axios.ts
+ ┃ ┗ index.ts
+ ┣ assets
+ ┃ ┗ react.svg
+ ┣ components
+ ┃ ┣ chart
+ ┃ ┃ ┣ Chart.tsx
+ ┃ ┃ ┣ CustomToolTip.tsx
+ ┃ ┃ ┗ CustomisedDot.tsx
+ ┃ ┣ common
+ ┃ ┃ ┣ Button.tsx
+ ┃ ┃ ┣ Error.tsx
+ ┃ ┃ ┗ Header.tsx
+ ┃ ┗ index.ts
+ ┣ constants
+ ┃ ┣ constants.ts
+ ┃ ┗ index.ts
+ ┣ hooks
+ ┃ ┣ index.ts
+ ┃ ┗ useChartData.ts
+ ┣ pages
+ ┃ ┣ Main.tsx
+ ┃ ┗ index.ts
+ ┣ routes
+ ┃ ┗ router.tsx
+ ┣ types
+ ┃ ┣ assets.d.ts
+ ┃ ┣ index.ts
+ ┃ ┗ types.d.ts
+ ┣ utils
+ ┣ App.css
+ ┣ App.tsx
+ ┣ index.css
+ ┗ main.tsx
+```
+
+## 구현 내용
+
+#### 1. 시계열 차트 만들기
+
+<img src="/public/result/timeserieschart.png" style="width: 650px">
+
+-   [Recharts](https://recharts.org/en-US) 라이브러리를 사용하여 시계열 차트 구현
+
+#### 2. 호버 기능 구현
+
+<img src="/public/result/hover.gif" style="width: 650px">
+
+-   CustomToolTip, CustomisedDot 을 제작하여 자체 디자인 적용
+
+#### 3. 클릭 필터링 기능 구현
+
+<img src="/public/result/click.gif" style="width: 650px">
+
+#### 4. 버튼 필터링 기능 구현
+
+<img src="/public/result/button.gif" style="width: 650px">
 
 ## 커밋 컨벤션
 
