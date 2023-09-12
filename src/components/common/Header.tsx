@@ -7,21 +7,28 @@ const Header = () => {
     };
 
     return (
-        <StyledHeader onClick={reloadPage}>
-            <StyledLink to="/">Time-Series-Chart</StyledLink>
+        <StyledHeader>
+            <ReloadContainer onClick={reloadPage}>
+                <StyledLink to="/">Time-Series-Chart</StyledLink>
+            </ReloadContainer>
         </StyledHeader>
     );
 };
 
+const StyledHeader = styled.header`
+    padding: 2rem;
+    font-size: 32px;
+    font-weight: bold;
+`;
+
+const ReloadContainer = styled.div`
+    display: inline-block;
+    margin: 0 auto;
+`;
+
 const StyledLink = styled(Link)`
     text-decoration: none;
     color: #000;
-`;
-
-const StyledHeader = styled.header`
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
 `;
 
 export default Header;
