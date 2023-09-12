@@ -21,6 +21,7 @@ const StyledLink = styled(Link)`
 const StyledHeader = styled.header`
     font-size: 32px;
     font-weight: bold;
+    margin-bottom: 30px;
 `;
 
 export default Header;
