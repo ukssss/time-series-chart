@@ -34,28 +34,28 @@ const Main = () => {
         <>
             <ButtonContainer>
                 {CATEGORY.map((item) => (
-                    <Button onClick={handleSelectCategory} isActivated={item === category}>
+                    <Button key={item} onClick={handleSelectCategory} activated={item === category}>
                         {item}
                     </Button>
                 ))}
             </ButtonContainer>
-            <div>
-                <Chart
-                    district={district}
-                    category={category}
-                    handleSelectDistrict={handleSelectDistrict}
-                />
-            </div>
+
             <ButtonContainer>
-                <Button onClick={handleSelectDistrict} isActivated={district === '전체'}>
+                <Button key={'전체'} onClick={handleSelectDistrict} activated={district === '전체'}>
                     전체
                 </Button>
                 {chartDataByDistrict.map((item) => (
-                    <Button onClick={handleSelectDistrict} isActivated={item === district}>
+                    <Button key={item} onClick={handleSelectDistrict} activated={item === district}>
                         {item}
                     </Button>
                 ))}
             </ButtonContainer>
+
+            <Chart
+                district={district}
+                category={category}
+                handleSelectDistrict={handleSelectDistrict}
+            />
         </>
     );
 };
@@ -64,6 +64,8 @@ const ButtonContainer = styled.div`
     justify-content: center;
     display: flex;
     gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 `;
 
 export default Main;
