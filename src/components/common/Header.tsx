@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Header = () => {
+    const reloadPage = () => {
+        location.reload();
+    };
+
     return (
-        <StyledHeader>
+        <StyledHeader onClick={reloadPage}>
             <StyledLink to="/">Time-Series-Chart</StyledLink>
         </StyledHeader>
     );
