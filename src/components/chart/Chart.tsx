@@ -91,15 +91,15 @@ const Chart = ({ district, category, handleSelectDistrict }: IProps) => {
                     <Area
                         type="monotone"
                         dataKey="value_area"
-                        fill="#82ca9d"
-                        stroke="#82ca9d"
+                        fill="#FF6969"
+                        stroke="#FF6969"
                         yAxisId="left"
                         onClick={() => handleSelectDistrict(dot)}
                         dot={
                             <CustomisedDot
                                 cx={0}
                                 cy={0}
-                                stroke="#86d3a4"
+                                stroke="#FF6969"
                                 district={district}
                                 payload={{ id: '', time: '', value_area: 0, value_bar: 0 }}
                             />
